@@ -9,7 +9,7 @@ RUN apt-get update && \
     gcc-multilib
 
 # Download FS_v5.3.0 from MGH and untar to /opt
-RUN wget -N -q0- ftp://surfer.nmr.mgh.harvard.edu/pub/dist/freesurfer/5.3.0/freesurfer-Linux-centos6_x86_64-stable-pub-v5.3.0.tar.gz | tar -xzvf -C /usr/local
+RUN wget -N -qO- ftp://surfer.nmr.mgh.harvard.edu/pub/dist/freesurfer/5.3.0/freesurfer-Linux-centos6_x86_64-stable-pub-v5.3.0.tar.gz | tar -xzv -C /usr/local
 
 # Configure license
 COPY .license /usr/local/freesurfer/.license
